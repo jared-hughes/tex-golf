@@ -1,0 +1,38 @@
+{
+  "name": "tex-golf",
+  "displayName": "TeX Golf Language Support",
+  "description": "Adds support for a dialect of TeX used for code golfing",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "tex-golf",
+        "aliases": [
+          "TeX Golf",
+          "tex-golf"
+        ],
+        "extensions": [
+          ".golf.tex",
+          ".tex"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tex-golf",
+        "scopeName": "source.tex-golf",
+        "path": "./syntaxes/tex-golf.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {}
+}

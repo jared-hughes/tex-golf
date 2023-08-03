@@ -1,0 +1,42 @@
+{
+  "name": "TeX",
+  "patterns": [
+    {
+      "captures": {
+        "1": { "name": "punctuation.definition.keyword.tex-golf" }
+      },
+      "match": "(\\\\)(the|newcount|def|csname|else|endcsname|loop|repeat|or|fi|if(|num|dim|odd|(v|m|h)mode|inner|cat|x|void|hbox|vbox|eof|true|false|case)?)(?![a-zA-Z@])",
+      "name": "keyword.control.tex-golf"
+    },
+    {
+      "captures": {
+        "1": { "name": "keyword.control.catcode.tex-golf" },
+        "2": { "name": "punctuation.definition.keyword.tex-golf" },
+        "3": { "name": "constant.numeric.category.tex-golf" },
+        "4": { "name": "punctuation.separator.key-value.tex-golf" },
+        "5": { "name": "constant.numeric.category.tex-golf" }
+      },
+      "match": "((\\\\)catcode)(\\d+)(=)(\\d+)",
+      "name": "meta.catcode.tex-golf"
+    },
+    {
+      "captures": {
+        "1": { "name": "keyword.control.catcode.tex-golf" },
+        "2": { "name": "punctuation.definition.keyword.tex-golf" },
+        "3": { "name": "punctuation.separator.key-value.tex-golf" },
+        "4": { "name": "constant.numeric.category.tex-golf" }
+      },
+      "match": "((\\\\)catcode)`(?:\\\\)?.(=)(\\d+)",
+      "name": "meta.catcode.tex-golf"
+    },
+    {
+      "match": "#\\d",
+      "name": "variable.parameter.macro-param.tex-golf"
+    },
+    {
+      "match": "(\\\\)(?:[\\p{Alphabetic}@]+|[,;])",
+      "name": "support.function.general.tex"
+    }
+  ],
+  "scopeName": "source.tex-golf"
+}
